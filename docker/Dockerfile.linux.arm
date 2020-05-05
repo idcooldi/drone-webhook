@@ -1,0 +1,10 @@
+FROM plugins/base:linux-arm
+
+LABEL maintainer="Nix <idcooldi@gmail.com>" \
+  org.label-schema.name="Drone webhook" \
+  org.label-schema.vendor="Nix" \
+  org.label-schema.schema-version="1.0"
+
+COPY release/linux/arm/drone-webhook /bin/
+
+ENTRYPOINT ["/bin/drone-webhook"]
