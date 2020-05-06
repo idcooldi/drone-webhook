@@ -129,12 +129,12 @@ func (p Plugin) Exec() error {
 				fmt.Printf("Error: Failed to read the HTTP response body. %s\n", err)
 			}
 			fmt.Printf(`
-		URL: %s
-		METHOD: %s
-		HEADERS: %s
-		REQUEST BODY: %s
-		RESPONSE STATUS: %s
-		RESPONSE BODY: %s`,
+				URL: %s
+				METHOD: %s
+				HEADERS: %s
+				REQUEST BODY: %s
+				RESPONSE STATUS: %s
+				RESPONSE BODY: %s`,
 				req.URL,
 				req.Method,
 				req.Header,
@@ -142,7 +142,9 @@ func (p Plugin) Exec() error {
 				resp.Status,
 				string(body),
 			)
-			return err
+		}
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("invalid response codes %d", resp.StatusCode)
 		}
 	}
 

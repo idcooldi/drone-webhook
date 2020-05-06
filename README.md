@@ -52,7 +52,7 @@ Enable debug information
 
 **headers**
 
-custom headers 
+Custom headers 
 
 Simple usage headers:
 ```
