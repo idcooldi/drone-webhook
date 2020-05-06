@@ -128,13 +128,8 @@ func (p Plugin) Exec() error {
 			if err != nil {
 				fmt.Printf("Error: Failed to read the HTTP response body. %s\n", err)
 			}
-			fmt.Printf(`
-				URL: %s
-				METHOD: %s
-				HEADERS: %s
-				REQUEST BODY: %s
-				RESPONSE STATUS: %s
-				RESPONSE BODY: %s`,
+			fmt.Printf(
+				`URL: %s\n METHOD: %s\n HEADERS: %s\n REQUEST BODY: %s\n RESPONSE STATUS: %s\n RESPONSE BODY: %s`,
 				req.URL,
 				req.Method,
 				req.Header,
