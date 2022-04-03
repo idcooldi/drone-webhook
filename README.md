@@ -7,7 +7,7 @@
 
 
 
-[Drone](https://github.com/drone/drone) plugin for sending webhook.
+[Drone](https://github.com/drone/drone) plugin for sending webhook with custom authorization.
 
 
 ```steps:
